@@ -1,0 +1,17 @@
+digraph "model.domain.creature.player.Hero.equipWeapon"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="model.domain.creature.player.\lHero.equipWeapon",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="datalayer.SessionMapper.fill\lWeaponsAndEquip",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdatalayer_1_1_session_mapper.html#a20b6087d3d54a789f30e9db488ece648",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="datalayer.SessionMapper.equipHero",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdatalayer_1_1_session_mapper.html#ac14c2b865f307574f081c7d3f309c50e",tooltip=" "];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="datalayer.SessionMapper.from\lHeroSnapshot",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdatalayer_1_1_session_mapper.html#ace34de4c3e0d2a9f078a83bb70265403",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="datalayer.SessionMapper.from\lLevelSnapshot",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdatalayer_1_1_session_mapper.html#a34686b6f9f15134e26dc6a5bd1c919db",tooltip=" "];
+}

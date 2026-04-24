@@ -1,0 +1,11 @@
+digraph "controller.ui.UIState.UIState"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="controller.ui.UIState.UIState",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="controller.ui.SelectionStateDTO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacecontroller_1_1ui.html#a67761f495db32ab108051e9ebc29be0c",tooltip=" "];
+}

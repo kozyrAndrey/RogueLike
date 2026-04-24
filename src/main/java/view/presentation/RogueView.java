@@ -13,6 +13,18 @@ import view.presentation.dto.UIPresentation;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Представление игры RogueLike.
+ *
+ * Отвечает за отображение игрового состояния пользователю:
+ * карты уровня, характеристик героя, журнала событий,
+ * меню, инвентаря и статистики.
+ *
+ * Класс или интерфейс относится к слою View в архитектуре MVC.
+ *
+ * @see view.presentation.RoguePresenter
+ */
+
 public class RogueView {
     private static final int SCREEN_WIDTH = 82;
     private static final int SCREEN_HEIGHT = 36;

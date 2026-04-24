@@ -1,0 +1,27 @@
+digraph "model.domain.service.FogOfWarService.calculateVisibility"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="model.domain.service.Fog\lOfWarService.calculateVisibility",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="model.domain.service.Fog\lOfWarService.bresenhamRayCasting",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#ab68ca4c02998f1deea26b3164739d5c2",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="model.domain.Coordinates",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacemodel_1_1domain.html#a1bf30e5eccec53422a30389a70e97834",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="model.domain.service.Fog\lOfWarService.getBresenhamLine\lCached",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#acaee65d87399e3393d2faea7eedd41f1",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="model.domain.service.Fog\lOfWarService.bresenhamLine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#a1e4333d21427b68b23cdb46123627b40",tooltip=" "];
+  Node5 -> Node3 [id="edge5_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge6_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="model.domain.service.Fog\lOfWarService.getRoomBounds",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#a1f1543a0870ceaad63a2b45f647da5d7",tooltip=" "];
+  Node6 -> Node3 [id="edge8_Node000006_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge9_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="model.domain.service.Fog\lOfWarService.isPlayerInRoom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#ad1a374ac2ed2a276dc93f4619b99539e",tooltip=" "];
+  Node7 -> Node3 [id="edge10_Node000007_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge11_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="model.domain.service.Fog\lOfWarService.revealCorridor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1service_1_1_fog_of_war_service.html#aad768eba6ce559c488e6d6d857cd1dd0",tooltip=" "];
+}

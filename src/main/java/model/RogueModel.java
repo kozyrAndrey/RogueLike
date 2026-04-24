@@ -23,6 +23,26 @@ import java.util.Optional;
 import static datalayer.SessionMapper.fromLevelSnapshot;
 import static datalayer.SessionMapper.toLevelState;
 
+/**
+ * Основная модель игры RogueLike.
+ *
+ * Хранит текущее состояние игровой сессии, управляет игроком, уровнем,
+ * системой ходов, журналом событий, статистикой прохождения и сохранениями.
+ * Класс является центральной частью слоя Model в архитектуре MVC.
+ *
+ * Основные обязанности:
+ * - запуск новой игры;
+ * - обработка движения игрока;
+ * - переход между уровнями;
+ * - использование предметов;
+ * - сохранение и восстановление игровой сессии;
+ * - формирование состояния для отображения во View.
+ *
+ * @see model.domain.LevelManager
+ * @see model.domain.creature.player.Hero
+ * @see datalayer.GameDataRepository
+ */
+
 public class RogueModel {
     private Hero player;
     private LevelManager lm;
@@ -37,6 +57,15 @@ public class RogueModel {
     public RogueModel(GameDataRepository gdr) {
         this.gameDataRepository = gdr;
     }
+
+	/**
+ * Запускает новую игровую сессию для указанного игрока.
+ *
+ * Метод очищает последнее сохранение, создаёт героя, инициализирует первый уровень,
+ * создаёт систему ходов и добавляет приветственное сообщение в игровой лог.
+ *
+ * @param playerName имя игрока
+ */
 
     public void startNewGame(String playerName) {
         gameOver = false;
@@ -71,6 +100,17 @@ public class RogueModel {
                 levelState.score(), levelState.keys(),
                 levelState.name(), getLogMessages());
     }
+
+/**
+ * Выполняет ход игрока в заданном направлении.
+ *
+ * Метод передаёт команду перемещения в систему ходов, обрабатывает игровые события,
+ * проверяет смерть игрока и переход на следующий уровень.
+ *
+ * @param deltaX смещение по горизонтали
+ * @param deltaY смещение по вертикали
+ * @return true, если действие игрока было выполнено; иначе false
+ */
 
     public boolean movePlayer(int deltaX, int deltaY) {
         if (isGameOver() || lm == null || player == null) return false;

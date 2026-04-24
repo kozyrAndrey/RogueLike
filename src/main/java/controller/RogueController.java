@@ -15,6 +15,19 @@ import java.util.stream.Collectors;
 
 import static controller.MenuManager.*;
 
+/**
+ * Основной контроллер игры RogueLike.
+ *
+ * Отвечает за связь между пользовательским вводом, моделью игры и представлением.
+ * Получает команды от слоя ввода, вызывает соответствующие методы модели
+ * и инициирует обновление отображения.
+ *
+ * Класс относится к слою Controller в архитектуре MVC.
+ *
+ * @see model.RogueModel
+ * @see view.presentation.RogueView
+ */
+
 public class RogueController {
     private static final String BACKPACK_PROMPT =
             "Backpack: h-weapons, j-food, k-elixirs, e-scrolls. b/esc-close";

@@ -1,0 +1,31 @@
+PROJECT_NAME           = "RogueLike"
+PROJECT_BRIEF          = "Консольная rogue-like игра на Java"
+OUTPUT_DIRECTORY       = docs/developer
+
+INPUT                  = src/main/java README.md
+RECURSIVE              = YES
+FILE_PATTERNS          = *.java *.md
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+OPTIMIZE_OUTPUT_JAVA   = YES
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+UML_LOOK               = YES
+
+QUIET                  = NO
+WARNINGS               = YES

@@ -2,6 +2,16 @@ package model.domain.items;
 
 import model.domain.Coordinates;
 
+/**
+ * Эликсир временного усиления характеристик.
+ *
+ * При использовании накладывает на героя временный эффект,
+ * который действует ограниченное количество ходов.
+ *
+ * @see model.domain.items.BoostType
+ * @see model.domain.creature.player.ActiveBuff
+ */
+
 public class Elixir extends Item {
     private final BoostType boostType;
     private final int value;

@@ -4,6 +4,16 @@ import model.domain.Coordinates;
 import model.domain.Entity;
 import model.domain.creature.enemy.EnemyType;
 
+/**
+ * Базовый класс живой сущности игрового мира.
+ *
+ * Хранит координаты, максимальное здоровье, текущее здоровье,
+ * силу и ловкость. Используется как основа для игрока и противников.
+ *
+ * @see model.domain.creature.player.Hero
+ * @see model.domain.creature.enemy.Enemy
+ */
+
 public abstract class Character extends Entity {
     private int maxHealth;
     protected int health;

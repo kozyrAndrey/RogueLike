@@ -9,6 +9,22 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * Класс игрового персонажа.
+ *
+ * Хранит имя игрока, характеристики героя, количество сокровищ,
+ * ключи, рюкзаки для разных типов предметов, экипированное оружие
+ * и активные временные эффекты.
+ *
+ * Класс реализует предметную модель игрока и используется в игровой логике,
+ * боевой системе, инвентаре, сохранениях и отображении состояния.
+ *
+ * @see model.domain.creature.Character
+ * @see model.domain.creature.player.Backpack
+ * @see model.domain.items.Weapon
+ * @see model.domain.items.Item
+ */
+
 public class Hero extends Character {
     private final String name;
     private int value;
@@ -48,6 +64,16 @@ public class Hero extends Character {
     public int getValue() { return value; }
     public void addValue(int value) { this.value += value; }
     public boolean[] getKeys() { return keys; }
+
+/**
+ * Добавляет предмет в соответствующий раздел рюкзака.
+ *
+ * Тип предмета определяет, в какой рюкзак он будет помещён:
+ * оружие, еда, свитки или эликсиры.
+ *
+ * @param item предмет, который необходимо добавить
+ * @return true, если предмет успешно добавлен; иначе false
+ */
 
     public boolean addItemToBackpack(Item item) {
         System.out.println("Adding item to backpack: " + item.getName());
@@ -114,7 +140,12 @@ public class Hero extends Character {
     public void addBuff(BoostType type, int value, int time) {
         buffs.add(new ActiveBuff(type, value, time));
     }
-
+/**
+ * Обрабатывает истечение одного игрового хода.
+ *
+ * Метод уменьшает длительность активных эффектов и снимает их,
+ * если время действия завершилось.
+ */
     public void timeHasPassed() {
         ListIterator<ActiveBuff> buffIterator = buffs.listIterator();
         while (buffIterator.hasNext()) {

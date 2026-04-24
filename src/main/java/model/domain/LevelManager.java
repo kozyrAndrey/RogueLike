@@ -10,6 +10,26 @@ import model.domain.service.FogOfWarService;
 
 import java.util.*;
 
+/**
+ * Менеджер уровня игрового мира.
+ *
+ * Хранит карту уровня, список сущностей, игрока, врагов, предметы,
+ * двери, выход и состояние тумана войны. Отвечает за добавление,
+ * удаление и перемещение сущностей, проверку проходимости клеток
+ * и формирование состояния уровня для отображения.
+ *
+ * Основные обязанности:
+ * - хранение карты уровня;
+ * - управление сущностями на уровне;
+ * - обновление тумана войны;
+ * - размещение предметов, врагов, дверей и выхода;
+ * - формирование GameState для слоя представления.
+ *
+ * @see model.domain.GameState
+ * @see model.domain.creature.player.Hero
+ * @see model.domain.creature.enemy.Enemy
+ */
+
 public class LevelManager {
     public static final int MAP_HEIGHT = 20;
     public static final int MAP_WIDTH = 80;
@@ -231,7 +251,14 @@ public class LevelManager {
         items.clear();
         player = null;
     }
-
+	/**
+ * Формирует текущее состояние уровня для отображения.
+ *
+ * Метод обновляет туман войны, копирует карту уровня и размещает на ней
+ * видимые сущности: игрока, врагов, предметы, двери и выход.
+ *
+ * @return объект GameState с актуальными данными уровня
+ */
     public GameState getGameState() {
         updateFog();
         int[][] tmpField = new int[MAP_HEIGHT][MAP_WIDTH];

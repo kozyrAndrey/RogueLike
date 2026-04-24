@@ -1,0 +1,13 @@
+digraph "view.presentation.mapper.PresentationMapper.mapItemsToDisplayDTO"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="view.presentation.mapper.\lPresentationMapper.mapItemsToDisplayDTO",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="view.presentation.mapper.\lPresentationMapper.mapItemToDisplayDTO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classview_1_1presentation_1_1mapper_1_1_presentation_mapper.html#ad14acb1a6847207df85ce590e0cdd096",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="model.domain.items.Item.getType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmodel_1_1domain_1_1items_1_1_item.html#a947c165719a2985106c1b9996b33d961",tooltip=" "];
+}

@@ -14,6 +14,16 @@ import view.presentation.RogueView;
 
 import java.io.IOException;
 
+/**
+ * Точка входа в приложение RogueLike.
+ *
+ * Инициализирует основные компоненты игры и запускает игровой цикл.
+ * Класс связывает слой управления, модель игрового состояния и слой представления.
+ *
+ * @author Команда RogueLike
+ */
+
+
 public class App {
     private static final int SCREEN_WIDTH = 82;
     private static final int SCREEN_HEIGHT = 36;

@@ -6,6 +6,14 @@ import view.presentation.dto.GamePresentation;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Игровой цикл приложения.
+ *
+ * Организует непрерывную работу игры: получение ввода пользователя,
+ * обработку команд, обновление состояния модели и перерисовку интерфейса.
+ * Используется для управления жизненным циклом игровой сессии.
+ */
+
 public class RogueLoop {
     private final InputHandler inputHandler;
     private final RogueController controller;

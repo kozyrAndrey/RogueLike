@@ -16,6 +16,19 @@ import java.util.Optional;
 
 import static java.util.Collections.emptyList;
 
+/**
+ * Реализация репозитория игровых данных.
+ *
+ * Отвечает за сохранение и восстановление состояния игры,
+ * работу с локальными файлами и хранение статистики игровых попыток.
+ * Используется слоем модели для поддержки продолжения последней сессии
+ * и отображения таблицы результатов.
+ *
+ * @see datalayer.GameDataRepository
+ * @see datalayer.dto.SavedSessionDTO
+ * @see datalayer.dto.AttemptStatsDTO
+ */
+
 public class GameDataRepositoryImpl implements GameDataRepository {
 
     private static final String SAVE_DIR = "saves";

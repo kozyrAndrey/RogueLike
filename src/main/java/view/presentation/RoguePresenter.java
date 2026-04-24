@@ -10,6 +10,17 @@ import datalayer.dto.AttemptStatsDTO;
 
 import java.util.List;
 
+/**
+ * Презентер слоя отображения.
+ *
+ * Преобразует данные модели в формат, удобный для вывода пользователю.
+ * Используется как промежуточный компонент между игровой моделью
+ * и представлением.
+ *
+ * @see model.RogueModel
+ * @see view.presentation.RogueView
+ */
+
 public class RoguePresenter {
     private final PresentationMapper mapper;
 

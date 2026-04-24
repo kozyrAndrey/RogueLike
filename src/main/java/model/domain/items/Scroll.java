@@ -2,6 +2,16 @@ package model.domain.items;
 
 import model.domain.Coordinates;
 
+/**
+ * Свиток постоянного улучшения характеристик.
+ *
+ * При использовании навсегда увеличивает выбранную характеристику героя:
+ * здоровье, силу или ловкость.
+ *
+ * @see model.domain.items.BoostType
+ * @see model.domain.creature.player.Hero
+ */
+
 public class Scroll extends Item {
     private final BoostType boostType;
     private final int value;
